@@ -33,13 +33,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun delete(index : Int){
-        //To add the Item in List
         listofAnimals.removeAt(index)
         adapter!!.notifyDataSetChanged()
     }
 
     fun add(index: Int){
-        //To delete the Item in List
         listofAnimals.add(index,listofAnimals[index])
         adapter!!.notifyDataSetChanged()
     }
@@ -66,12 +64,7 @@ class MainActivity : AppCompatActivity() {
                     intent.putExtra("des" ,animal.des!!)
                     intent.putExtra("image" ,animal.image!!)
                     context!!.startActivity(intent)
-                    /* To add the Item in List
-                    add(position)
-                     */
-                    /* To delete the Item in List
-                    delete(position)
-                     */
+                  
                 }
                 return myView
             }else{
@@ -86,12 +79,7 @@ class MainActivity : AppCompatActivity() {
                     intent.putExtra("des" ,animal.des!!)
                     intent.putExtra("image" ,animal.image!!)
                     context!!.startActivity(intent)
-                    /* To add the Item in List
-                    add(position)
-                     */
-                    /* To Delete the Item in List
-                    delete(position)
-                     */
+                  
                 }
                 return myView
             }
@@ -112,11 +100,3 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-/*
-listofAnimals.add(Animal("Babon","Babon lives in Zoo",R.drawable.baboon,false))
-listofAnimals.add(Animal("Bulldog","Bulldog lives in Zoo",R.drawable.bulldog, false))
-listofAnimals.add(Animal("Panda","Panda lives in Zoo",R.drawable.panda, true))
-listofAnimals.add(Animal("Swallow Bird","Swallow Bird lives in Zoo",R.drawable.swallow_bird, false))
-listofAnimals.add(Animal("White Tiger","White Tiger lives in Zoo",R.drawable.white_tiger, true))
-listofAnimals.add(Animal("Zebra","Zebra lives in Zoo",R.drawable.zebra, false))
-        */
